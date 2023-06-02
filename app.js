@@ -20,7 +20,7 @@ const dbCon = require('./config/mongo');
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 3000;
-const API_VERSION = process.env.API_VERSION;
+// const API_VERSION = process.env.API_VERSION;
 
 app.use(express.json());
 // routerApi(app);
@@ -29,7 +29,7 @@ app.use(boomErrorHandler);
 app.use(errorHandler);
 
 app.listen(port, () => {
-  console.log(`http://localhost:${port}/api/${API_VERSION}/`);
+  // console.log(`http://localhost:${port}/api/${API_VERSION}/`);
 });
 
 dbCon();
